@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header>
+    <h1>Create Store</h1>
+</header>
+<section class="create-store-form">
+    <form method="post">
+        <div class="form-group">
+            <label for="store-name">Store name</label>
+            <input type="text" class="form-control" id="store-name" name="store-name" placeholder="John Lewis">
+        </div>
+        <div class="form-group">
+            <label for="store-domain">Store domain</label>
+            <input type="text" class="form-control" id="store-domain" name="store-domain" placeholder="https://..." aria-describedby="store-domain-help">
+            <small id="store-domain-help" class="form-text text-muted">
+                What is the domain of the retail website?
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="item-tag">HTML Tag</label>
+            <input type="text" class="form-control" id="item-tag" name="item-tag" placeholder="span" aria-describedby="item-tag-help">
+            <small id="item-tag-help" class="form-text text-muted">
+                What HTML tag encloses the price of items on this website?
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="item-query">HTML Query</label>
+            <input type="text" class="form-control" id="item-query" name="item-query" placeholder='{"class": "price price--large"}' aria-describedby="item-query-help">
+            <small class="form-text text-muted" id="item-query-help">
+                What attributes are on the element that contain the price?
+            </small>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</section>
+{% endblock %}

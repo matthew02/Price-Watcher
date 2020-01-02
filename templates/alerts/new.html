@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header>
+    <h1>Create Alert</h1>
+</header>
+<section class="create-item-form">
+    <form method="post">
+        <div class="form-group">
+            <label for="item-name">Item name</label>
+            <input type="text" class="form-control" id="item-name" name="item-name" placeholder="Surface Pro 6">
+        </div>
+        <div class="form-group">
+            <label for="item-url">Item URL</label>
+            <input type="text" class="form-control" id="item-url" name="item-url">
+        </div>
+        <div class="form-group">
+            <label for="price-limit">Price limit</label>
+            <input type="text" class="form-control" id="price-limit" name="price-limit" placeholder="120" aria-describedby="price-limit-help">
+            <small class="form-text text-muted" id="price-limit-help">
+                At which price would you like to be notified?
+            </small>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</section>
+{% endblock %}

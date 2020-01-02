@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Price Watcher</h1>
+        <p class="lead">We scan online store websites to alert you of price drops on items that interest you.</p>
+        <hr class="my-4">
+        <p>Sign up and get started by adding the URL of an item you wish to track. We'll do the rest.</p>
+        <a class="btn btn-primary btn-lg" href="{{ url_for('users.register') }}">Get Started</a>
+    </div>
+{% endblock %}
