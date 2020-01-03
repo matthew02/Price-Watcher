@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """MongoDB database manager."""
 
+import os
 import pymongo
 
 from pymongo.results import DeleteResult, InsertOneResult, UpdateResult
