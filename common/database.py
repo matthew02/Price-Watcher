@@ -4,7 +4,12 @@
 import os
 import pymongo
 
+from dotenv import load_dotenv
 from pymongo.results import DeleteResult, InsertOneResult, UpdateResult
+
+# Alert uses Mailgun to send email notifications. The Mailgun library requires
+# environment variables which have not yet been loaded, so load them here.
+load_dotenv()
 
 
 class Database(object):
