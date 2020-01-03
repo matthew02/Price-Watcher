@@ -21,7 +21,6 @@ class Database(object):
     """
 
     URI = os.environ.get('MONGODB_URI')
-    print(f'URI = {URI}')
     DB = pymongo.MongoClient(URI).get_database()
 
     @staticmethod
