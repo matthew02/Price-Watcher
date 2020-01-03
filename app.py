@@ -5,9 +5,9 @@ import os
 
 from flask import Flask, render_template
 
-from alerts import alert_blueprint
-from stores import store_blueprint
-from users import user_blueprint
+from controllers.alerts import alert_blueprint
+from controllers.stores import store_blueprint
+from controllers.users import user_blueprint
 
 app = Flask(__name__)
 app.secret_key = os.urandom(64)
