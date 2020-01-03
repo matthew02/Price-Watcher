@@ -14,7 +14,7 @@ class Database(object):
         Database.DATABASE: The database cursor.
     """
 
-    URI = 'mongodb://192.168.254.110:27017/pricing'
+    URI = os.environ.get('MONGOLAB_URI')
     DB = pymongo.MongoClient(URI).get_database()
 
     @staticmethod
